@@ -11,3 +11,166 @@
 body{
     font-family: 'Ramabhadra', sans-serif;
 }
+
+/* Banner Start */
+
+.header{
+    background-color: #2D25A0;
+    width: 100%;
+    padding: 153px 0 86px 0;
+}
+
+.banner{
+    width: 1142px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.banner-title{
+    font-size: 64px;
+    color: #ffffff;
+    line-height: 55px;
+    margin-bottom: 27px;
+}
+
+.banner-btn{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 24px;
+    background-color: #E02C6D;
+    font-size: 16px;
+    box-shadow: 6px 12px 68px rgb(0 0 0 / 50%);
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeAnimation 1s forwards;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.banner-btn::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #fff, transparent);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transform: skewX(-30deg);
+    transition: left .5s;
+}
+
+.banner-btn:hover::before{
+    left: 100%;
+}
+
+/* Link Animation Start */
+@keyframes fadeAnimation{
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+/* Link Animation End */
+
+.banner .banner-img img{
+    width: 556px;
+    height: 438px;
+}
+
+/* Banner End */
+
+/* Main Area Start */
+.main{
+    background-color: #FDFDFD;
+    width: 100%;
+}
+/* Article Area Start */
+.articles{
+    display: grid;
+    grid-template-columns: 330px 330px 330px;
+    grid-column-gap: 30px;
+    grid-row-gap: 27px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+
+.article{
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 10px 20px 30px gray;
+}
+
+.article-img img{
+    width: 300px;
+    height: 256px;
+    margin-bottom: 16px;
+}
+
+.article-heading{
+    font-size: 28px;
+    color: #18191F;
+    margin-bottom: 10px;
+}
+
+.article-paragraph{
+    font-size: 16px;
+    color: #6C6C6C;
+}
+/* Article Area End */
+
+/* End of Main Area */
+
+/* Footer Start */
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 483px;
+    margin: 158px auto 63px auto;
+
+}
+
+.footer .logo img{
+    width: 483px;
+    height: 110px;
+    margin-bottom: 20px;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    width: 170px;
+}
+
+.social-icon{
+    background-color: #E7E7E8;
+    height: 32px;
+    width: 32px;
+    color: #969BAB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 14px;
+}
+
+.social-icon:last-child{
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+
+.copyright{
+    font-size: 24px;
+    color: #000000;
+}
+/* Footer End */
