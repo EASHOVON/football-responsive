@@ -15,8 +15,10 @@ body{
 /* Banner Start */
 
 .header{
-    background-color: #2D25A0;
-    width: 100%;
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(45,37,160,1) 0%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
     padding: 153px 0 86px 0;
 }
 
@@ -31,8 +33,11 @@ body{
 .banner-title{
     font-size: 64px;
     color: #ffffff;
-    line-height: 55px;
-    margin-bottom: 27px;
+    line-height: 80px;
+}
+
+.banner-title:nth-child(3){
+    margin-bottom: 30px;
 }
 
 .banner-btn{
@@ -90,6 +95,7 @@ body{
 /* Main Area Start */
 .main{
     background-color: #FDFDFD;
+    padding: 0 15px;
     width: 100%;
 }
 /* Article Area Start */
@@ -174,7 +180,7 @@ hr{
 }
 
 .team-1-title, .team-2-title{
-    font-size: 25px;
+    font-size: 38px;
     color: whitesmoke;
 }
 
@@ -204,8 +210,45 @@ hr{
     border-radius: 110px 42px 110px 46px;
 }
 
-
 /* Latest Result Area End */
+
+/* Schedule Start */
+.schedule{
+    max-width: 1142px;
+    margin: 70px auto;
+}
+
+.schedule-title{
+    font-size: 40px;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.schedule-title::after{
+    content: "";
+    width: 15%;
+    height: 5%;
+    background-color: #b81e20;
+    position: absolute;
+    bottom: 5%;
+    right: 42%;
+}
+
+.schedule-title span{
+    color: #b81e20;
+}
+
+.schedule-contents{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 20px;
+}
+/* Schedule Start End */
 
 /* End of Main Area */
 
@@ -254,3 +297,251 @@ hr{
     color: #000000;
 }
 /* Footer End */
+
+
+
+/* Media Query */
+/* Mobile Device */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    /* Banner Start */
+    .header{
+ 
+        width: 100%;
+        padding: 95px 30px 55px 30px;
+    }
+    .banner{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .banner-title{
+        font-size: 30px;
+        line-height: 40px;  
+    }
+
+    .banner-btn{
+        padding: 8px 20px;
+        margin-bottom: 50px;
+    }
+
+    .banner .banner-img img{
+        width: 80%;
+        height: auto;
+    }
+     
+
+    /* Banner End */
+
+    /* Article Start */
+    .articles{
+        grid-template-columns: repeat(1, 330px);
+    }
+    /* Article End */
+
+    /* Latest Result Area Start */
+    .result-content{
+        grid-template-columns: repeat(1, 330px);
+    }
+
+    hr{
+        left: 40%;
+    }
+    /* Latest Result Area End */
+    
+    /* Schedule Area Start */
+    .schedule-contents{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .schedule-title::after{
+        width: 23%;
+        right: 42%;
+    }
+
+    .content img{
+        width: 100%;
+    }
+    /* Schedule Area End */
+    /* Footer Start */
+    .footer{
+        width: 100%;
+    }
+
+    .footer .logo img{
+        width: 274px;
+        height: auto;
+    }
+
+    .copyright{
+        font-size: 24px;
+    }
+    /* Footer End */
+
+}
+
+/* Tablet */
+@media only screen and (min-width: 481px) and (max-device-width : 768px){
+    /* Header Start */
+    .header{
+        width: 100%;
+        padding: 95px 53px 55px 74px;
+    }
+
+    .banner{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .banner-title{
+        font-size: 30px;
+        line-height: 40px;  
+    }
+
+    .banner-btn{
+        padding: 8px 20px;
+        margin-bottom: 50px;
+    }
+
+    .banner .banner-img img{
+        width: 80%;
+        height: auto;
+    }
+     
+    /* Header End */
+    /* Banner End */
+
+    /* Article Start */
+    .articles{
+        grid-template-columns: repeat(1, 330px);
+    }
+    /* Article End */
+
+    /* Latest Result Area Start */
+    .result-content{
+        grid-template-columns: repeat(1, 330px);
+    }
+
+    hr{
+        left: 41%;
+    }
+    /* Latest Result Area End */
+    
+    /* Schedule Area Start */
+    .schedule-contents{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .schedule-title::after{
+        width: 18%;
+        right: 42%;
+    }
+
+    .content img{
+        width: 100%;
+    }
+    
+    /* Schedule Area End */
+    /* Footer Start */
+    .footer{
+        width: 100%;
+    }
+
+    .footer .logo img{
+        width: 274px;
+        height: auto;
+    }
+
+    .copyright{
+        font-size: 24px;
+    }
+    /* Footer End */
+}
+/* Medium Device or Large */
+
+@media only screen and (min-width: 769px) and (max-device-width : 1024px){
+    /* Header Start */
+     
+    .header{
+        width: 100%;
+        padding: 90px 0 60px 0;
+    }
+
+    .banner{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto
+    }
+
+    .banner-title{
+        font-size: 30px;
+        line-height: 40px;  
+    }
+
+    .banner-btn{
+        padding: 8px 20px;
+        margin-bottom: 50px;
+    }
+
+    .banner .banner-img img{
+        width: 440px;
+        height: 325px;
+    }
+     
+    /* Header End */
+    /* Banner End */
+
+    /* Article Start */
+    .articles{
+        grid-template-columns: repeat(2, 330px);
+    }
+    /* Article End */
+
+    /* Latest Result Area Start */
+    .result-content{
+        grid-template-columns: repeat(1, 330px);
+    }
+
+    hr{
+        left: 41%;
+    }
+    /* Latest Result Area End */
+    
+    /* Schedule Area Start */
+    .schedule-contents{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .schedule-title::after{
+        width: 18%;
+        right: 42%;
+    }
+
+    .content img{
+        width: 100%;
+    }
+    
+    /* Schedule Area End */
+    /* Footer Start */
+    .footer{
+        width: 100%;
+    }
+
+    .footer .logo img{
+        width: 274px;
+        height: auto;
+    }
+
+    .copyright{
+        font-size: 24px;
+    }
+    /* Footer End */
+}
+
+/* Desktop */
+/* @media (max-width : 75em) {
+    
+} */
